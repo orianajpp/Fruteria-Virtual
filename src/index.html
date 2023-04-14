@@ -2,13 +2,248 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
+    <title>FrutiWeb</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <h1>Frutería Virtual</h1>
+      <div class="ingreso">
+          <button class="carrito">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <circle cx="6" cy="19" r="2" />
+              <circle cx="17" cy="19" r="2" />
+              <path d="M17 17h-11v-14h-2" />
+              <path d="M6 5l14 1l-1 7h-13" />
+            </svg>
+          </button>
+          <a class="sesion" href="#">Inciar sesión</a>
+      </div>
+
+    </header>
+  <main>
+    <section>
+        <div class="contenido">
+
+          <div class="contenido1">
+            <div class="producto">
+            
+            <button class="producto-boton">
+              <div>
+                <p>
+                  <img class="imagen" src="/Imagenes/fresas.webp" alt="fresas">
+                </p>
+                <h2>Frutilla</h2>
+                <h3>Costo: 1200$</h3>
+              </div>
+            </button>
+          </div>
+            <button class="producto">
+              <p>
+                <img class="imagen" src="/Imagenes/Cambur.webp" alt="cambur">
+              </p>
+              <h2>Platanos</h2>
+              <h3>Costo: 1200$</h3>
+            </button>
+            
+            <button class="producto">
+              <p>
+                  <img class="imagen" src="/Imagenes/kiwi.jpg" alt="kiwi">
+              </p>
+              <h2>Kiwi</h2>
+              <h3>Costo: 1200$</h3>
+            </button>
+            <button class="producto">
+              <p>
+                  <img class="imagen" src="/Imagenes/arandanos.jpeg" alt="arandanos">
+              </p>
+              <h2>Arandanos</h2>
+              <h3>Costo: 1200$</h3>
+            </button>
+          </div>
+
+
+          <div class="contenido2">
+            <button class="producto">
+              <p>
+                 <img class="imagen" src="/Imagenes/limon.jpg" alt="limon">
+              </p>
+              <h2>Limón</h2>
+              <h3>Costo: 1200$</h3>
+            </button>
+    
+            <button class="producto">
+              <p>
+                  <img class="imagen" src="/Imagenes/sandia.jpg" alt="sandia">
+              </p>
+              <h2>Sandía</h2>
+              <h3>Costo: 1200$</h3>
+            </button>
+            <button class="producto">
+              <p>
+                  <img class="imagen" src="/Imagenes/uvas.webp" alt="uvas">
+              </p>
+              <h2>Uvas</h2>
+              <h3>Costo: 1200$</h3>
+            </button>
+            <button class="producto">
+              <p>
+                  <img class="imagen" src="/Imagenes/manzanas.jpg" alt="manzanas">
+              </p>
+              <h2>Manzanas</h2>
+              <h3>Costo: 1200$</h3>
+            </button>
+          </div>
+          </div>
+      </section>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+ 
+ 
+  <section>
+    <form action="" id="formulario" class="formulario">
+
+
+      <div class="datos">
+      <label>Datos de envío</label>
+      </div>
+
+
+      <div class="datos-ep"></div>
+            <div>
+              <label class="datos1" >Nombre de cliente</label>
+            </div>
+            <div>
+              <input class="input" type="text" placeholder="Nombre y Apellido">
+            </div>
+            <div>
+              <label class="datos1">Dirección de envío</label>
+            </div>
+            <div>
+              <textarea class="input"  name="Dirección de envío" id="" cols="10" rows="1"></textarea>
+            </div>
+            <div>
+              <label class="datos1">Teléfono de contacto</label>
+            </div>
+            <div>
+              <input class="input" type="text" placeholder="e.j 9 416 636 50">
+            </div>
+      </div>
+      
+
+
+      <div class="datos">
+        <label>Datos de pago</label> 
+      </div>
+      
+      
+      <div class="datos-epp">
+            <div class="datos1">
+              <label >Tipo de tarjeta</label>
+            </div>
+            <div>
+              <input type="radio" name="Visa" id="tdc">
+            </div>
+            <div class="tdc">
+
+              <input type="radio" name="Master Card" id="master">
+              <img  width="10px" height="10px" class="tdc-imag" src="/Imagenes/visa.JPG" alt="visa">
+          
+            </div>
+            <div class="tdc">
+
+              <img width="10px" height="10px" class="tdc-imag" src="/Imagenes/master1.JPG" alt="master">
+              <label class="datos1">Nombre de la tarjeta</label>
+
+            </div>
+            <div>
+              <input class="input" type="text" placeholder="Nombre impreso en la tarjeta">
+            </div>
+            <div>
+              <label class="datos1">Número de la tarjeta</label>
+            </div>
+            <div>
+              <input class="tdc" id="tdc" type="text" maxlength="16" placeholder="e.j 5862 6854 2663 2415" required>
+            </div>
+            <div>
+              <label class="datos1">Fecha de expiración</label>
+            </div>
+            <div>
+              <input class="input" type="text" placeholder="MM/AAAA">
+            </div>
+            <div>
+              <label class="datos1">Código de verificación</label>
+            <div>
+              <input class="input" type="text" maxlength="3" placeholder="e.j 268"> 
+            </div>
+      </div>
+
+       
+
+
+        <div class="boton">
+            <button class="Pagar"  type="submit">Pagar</button>
+        </div>
+
+      </div>
+    </form>
+  </section>
+
+        
+
+
+          <br><br><br><br><br>
+          <br><br><br><br><br>
+          <br><br><br><br><br>
+          <br><br><br><br><br>
+         
+          
+        
+          
+
+       
+    </main>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+      
+
+    
+    <footer>
+      
+      <nav>
+        <a href="#">Condiciones</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Condiciones de Privacidad</a>
+        <a href="#">Declaración de Accesibilidad</a>
+       </nav>
+        <div>
+          <p>Siguenos en las redes sociales</p>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <rect x="4" y="4" width="16" height="16" rx="4" />
+            <circle cx="12" cy="12" r="3" />
+            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <rect x="3" y="5" width="18" height="14" rx="4" />
+            <path d="M10 9l5 3l-5 3z" />
+          </svg>
+        </div>
+    </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
