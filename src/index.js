@@ -1,33 +1,75 @@
+const abrir = document.getElementById("abrir"); 
+const formularioDePago = document.getElementById("formularioDePago");
+const contenido = document.getElementById("contenido")    
+const pagar = document.getElementById("pagar");
+
+abrir.addEventListener("click", () => {
+  formularioDePago.classList.add("prendeFormulario") + contenido.classList.add("frutas")
+});
+
+/*pagar.addEventListener("click", () => {
+  formularioDePago.classList.remove("prendeFormulario") + contenido.classList.remove("frutas")
+});*/
+
+const mascaraNumeros = document.getElementBy("tdc");
+
+function action () {
+  
+  n = 13
+  mascara = "#"
+
+  if (typeof texto !== 'string') {
+    throw TypeError('El argumento «texto» debe ser una cadena de caracteres.');
+  }
+         
+  if (typeof n !=='number' || !Number.isInteger(n)) {
+    throw TypeError('El argumento «texto» debe ser un número entero.');
+  }
+     
+  if (typeof mascara !== 'string') {
+    throw TypeError('El argumento «mascara» debe ser una cadena de caracteres.');
+  }
+}
+
+mascaraNumeros.addEventListener("keydown", action)
+
+
+
+/*
+
+
 const tdc = document.getElementById("tdc");
-//const numero = querySelector("#tdc")
+const numero = document.querySelector("#tdc");
+  function action() 
+  {
+ 
+    ppp = document.getElementById("tdc");
+
+  
+  maskify(texto, n = 12, mascara = '#');
+  if (typeof texto != 'string') {
+   throw TypeError('El argumento «texto» debe ser una cadena de caracteres.');
+        }
+        
+        if (typeof n != 'number' || !Number.isInteger(n)) {
+           throw TypeError('El argumento «texto» debe ser un número entero.');
+        }
+    
+        if (typeof mascara != 'string') {
+          throw TypeError('El argumento «mascara» debe ser una cadena de caracteres.');
+         }
+        }
+
+  
+numero.addEventListener("keyup", action);
+
+
 
 tdc.addEventListener("click", () => {
   return alert("holis")
 }) 
 
-//const expresiones= {
-
- // NumeroTdc: /^\d{1,16}$/
-
-//const numero = addEventListener(keydown, ){
-
-function maskify(texto, n = 12, mascara = '#') {
-  if (typeof texto != 'string') {
-      throw TypeError('El argumento «texto» debe ser una cadena de caracteres.');
-  }
-  
-  if (typeof n != 'number' || !Number.isInteger(n)) {
-      throw TypeError('El argumento «texto» debe ser un número entero.');
-  }
-
-  if (typeof mascara != 'string') {
-      throw TypeError('El argumento «mascara» debe ser una cadena de caracteres.');
-  }
-
-  return ('' + texto).slice(0, n).replace(/./g, mascara) + ('' + texto).slice(n);
-}
-
-  console.log(maskify('0256975412369854')); // $$$DEFGHIJ
+/
 
 
 
@@ -58,9 +100,7 @@ function maskify(texto, n = 12, mascara = '#') {
 
 
 
-
-
-/*(function() {
+(function() {
   card = {
     // Funcion que valida la longitud del input ingresado por el usuario
     validNumber(input) {
@@ -84,21 +124,21 @@ function maskify(texto, n = 12, mascara = '#') {
             }
             if (sumaTotal % 10 === 0) {
             return true;
-            console.log('Es una tarjeta valida');*/
+            console.log('Es una tarjeta valida');
 
-            /*let creditCard = document.getElementById('input')
+           let creditCard = document.getElementById('input')
               1
             celular.addEventListener('keypress', (event) => {
               event.preventDefault()
               // console.log(event.keyCode)
               let valorTecla = String.fromCharCode(event.keyCode)
-              console.log(valorTecla)
+              console.log(valorTecla) 
               let valorParsed = parseInt(valorTecla)
               // console.log(valorParsed)
               if(valorParsed) {
                 input.value = input.value + valorParsed
               }
-            })*/
+            })
 
 
 

@@ -1,7 +1,6 @@
 *{
     margin: 0;  
     padding: 0;
-    box-sizing: border-box;
     outline: none;
     border: none;
     text-decoration: none;
@@ -9,20 +8,29 @@
     text-transform: capitalize;
 }
 
+
 html{
     font-size: 62.5%;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     font-family: 'Comfortaa', cursive;
+    opacity: 1;
+    pointer-events: auto;
 }
 
-body{
-    background-color: rgb(242, 245, 245);
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 h1{
     margin-top: 50px;
+    margin-bottom: 5px;
     text-align: center;
-
 }
 h2{
     padding-bottom: 0;
@@ -33,70 +41,126 @@ h2{
 h3{
     padding-bottom: 20px;
     font-size: bold;
-    font-weight: 100;
+    font-weight: 200;
 }
-.ingreso{
-    text-align: right;
+
+/* CSS header*/
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    
 }
-.carrito{
-    width: 50px;
-    height: 50px;
+ 
+.inicio{
+    text-align: end;
+    margin: 10px;
 }
-.sesion{
-    text-decoration: none;
-    text-transform: capitalize;
+
+.inicio-sesion{
+    padding: 4px 8px;
+    background-color: black;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgb(218, 225, 225);
+    
 
 }
-.contenido1{
-    text-align: center;
+
+.inicio-sesion:hover{
+    box-shadow: 0 6px 12px rgb(149, 154, 154);
 }
-.contenido2{
-    text-align: center;
+
+
+/*CSS productos seccion frutas */
+
+.contenido1 .contenido2{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+       
 }
+
+
 
 .producto{
-
-    font-family: 'Comfortaa', cursive;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     font-size: medium;
-    font-weight: small;
     width: auto;
     height: auto;
-    overflow: hidden;
-    float: left;
-    margin: 20px;
     text-align: center;
+    opacity: 1;
+    pointer-events: auto;
+    
 }
+.frutas{                           /*lo coloco aquí por lo de la cascada*/
+    opacity: 0.3;
 
+}
+.producto-boton{
+    background-color: white;
+    font-family: 'Comfortaa', cursive;
+    margin: 20px;
+    width: 150px;
+    height: 180px;
+    box-shadow: 0 4px 8px rgb(218, 225, 225);
+}
+.producto-boton:hover {
+    box-shadow: 0 10px 15px rgb(149, 154, 154);
+}
 
 .imagen{
     padding: 20px;
     text-align: center;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+    box-sizing: border-box;
 }
 
 
-/* Ventana de solicitud de tarjeta*/
+/*CSS sección formulario - Ventana modal de solicitud de tarjeta*/
+
+.formulario-pago {
+  
+    display: none;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+   
+
+}
+.prendeFormulario{
+    display: flex;
+    position: fixed;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
 
 #formulario {
     font-family: 'Comfortaa', cursive;
     background-color: white;
     border-style: ridge;
-    border-color: black;
-    border-radius: 10%;
+    border-radius: 5%;
     width: 300px;
     height: 500px;
-    position: relative;
     padding: 20px;
     float: left;
     overflow: hidden;
     display: block;
-    
+    box-shadow: 0 10px 15px ;
+    box-shadow: 0 4px 8px rgb(218, 225, 225);   
 }
 
  .datos-ep datos-epp{
     text-align: left;
+
  }   
 
 .datos{
@@ -104,7 +168,7 @@ h3{
     font-size: larger;
     font-weight: bolder;
     text-align: center;
-   
+    padding: 20px;
 }
 
 .input{
@@ -112,6 +176,7 @@ h3{
     background-color: rgb(218, 219, 223);
     font-family: 'Comfortaa', cursive;
     font-size: xx-small;
+    padding: 4px;
 }
 
 
@@ -121,7 +186,40 @@ h3{
     height: 1px;
     
 }
+.datos1{
+    margin: 10px;
+}
   
    
+/*CSS del footer*/
+
+footer{
+    display: flex;
+    justify-content: center;
+
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    padding-right: 400px;
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
