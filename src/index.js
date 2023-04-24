@@ -1,198 +1,41 @@
+import validator from './validator.js';
+
+// Obtención de los elementos del DOM
 const abrir = document.getElementById("abrir"); 
 const formularioDePago = document.getElementById("formularioDePago");
 const contenido = document.getElementById("contenido")    
 const pagar = document.getElementById("pagar");
+const respuesta = document.getElementById("respuesta");
+const obtenHeader = document.getElementById('superior');
+const obtenFooter = document.getElementById('pie');
 
+//Ejecución deeEventos del DOM
 abrir.addEventListener("click", () => {
-  formularioDePago.classList.add("prendeFormulario") + contenido.classList.add("frutas")
+  formularioDePago.classList.add("prendeFormulario") + contenido.classList.add("frutas") + obtenFooter.classList.add("frutas") + obtenHeader.classList.add("frutas");
 });
 
-/*pagar.addEventListener("click", () => {
-  formularioDePago.classList.remove("prendeFormulario") + contenido.classList.remove("frutas")
-});*/
+pagar.addEventListener("click", () => {
+  const obtenNumero = document.getElementById("tdcNumber").value;
+  const tarjetaValida = validator.isValid(obtenNumero); 
+  const tarjetaMascara = validator.maskify(obtenNumero);
 
-const mascaraNumeros = document.getElementBy("tdc");
-
-function action () {
-  
-  n = 13
-  mascara = "#"
-
-  if (typeof texto !== 'string') {
-    throw TypeError('El argumento «texto» debe ser una cadena de caracteres.');
+  if (obtenNumero === ''){
+    respuesta.textContent = "Debe ingresar el número de la tarjeta"
+    return
   }
-         
-  if (typeof n !=='number' || !Number.isInteger(n)) {
-    throw TypeError('El argumento «texto» debe ser un número entero.');
+  
+  else if (obtenNumero.length < 10){
+    respuesta.textContent = "El número ingresado es incorrecto"
+    return
   }
-     
-  if (typeof mascara !== 'string') {
-    throw TypeError('El argumento «mascara» debe ser una cadena de caracteres.');
+      
+  
+  if(tarjetaValida === true){
+    respuesta.textContent = "tu tarjeta " + tarjetaMascara + " es válida";
   }
-}
 
-mascaraNumeros.addEventListener("keydown", action)
-
-
-
-/*
-
-
-const tdc = document.getElementById("tdc");
-const numero = document.querySelector("#tdc");
-  function action() 
-  {
- 
-    ppp = document.getElementById("tdc");
-
+  else{
+    respuesta.textContent = "La tarjeta " + tarjetaMascara + " es inválida";
+  }
   
-  maskify(texto, n = 12, mascara = '#');
-  if (typeof texto != 'string') {
-   throw TypeError('El argumento «texto» debe ser una cadena de caracteres.');
-        }
-        
-        if (typeof n != 'number' || !Number.isInteger(n)) {
-           throw TypeError('El argumento «texto» debe ser un número entero.');
-        }
-    
-        if (typeof mascara != 'string') {
-          throw TypeError('El argumento «mascara» debe ser una cadena de caracteres.');
-         }
-        }
-
-  
-numero.addEventListener("keyup", action);
-
-
-
-tdc.addEventListener("click", () => {
-  return alert("holis")
-}) 
-
-/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(function() {
-  card = {
-    // Funcion que valida la longitud del input ingresado por el usuario
-    validNumber(input) {
-      let regex = /^\d*$/;
-      if (!input.search(regex))
-        return input;
-      else return false;
-    }
-      validCard(numberCard) {
-        if (numberCard) {
-            let sumaTotal = 0;
-            let revserNum = [...numberCard].reverse(); // obteniendo array inverso  
-            for (let index = 1; index < revserNum.length; index = index + 2) {
-            revserNum[index] = revserNum[index] * 2;
-            if (revserNum[index] >= 10) {
-                revserNum[index] = revserNum[index] - 9;
-            }
-            }
-            for (let value of revserNum) {
-            sumaTotal = sumaTotal + parseInt(value);
-            }
-            if (sumaTotal % 10 === 0) {
-            return true;
-            console.log('Es una tarjeta valida');
-
-           let creditCard = document.getElementById('input')
-              1
-            celular.addEventListener('keypress', (event) => {
-              event.preventDefault()
-              // console.log(event.keyCode)
-              let valorTecla = String.fromCharCode(event.keyCode)
-              console.log(valorTecla) 
-              let valorParsed = parseInt(valorTecla)
-              // console.log(valorParsed)
-              if(valorParsed) {
-                input.value = input.value + valorParsed
-              }
-            })
-
-
-
-
-            
-  
-
-
-
-
-            
-
-
-
-
-
-
-
-/*const pago =addEventListener("Pagar"){
-    function action ()      
-        
-        cuenta = 0
-        numero = document.getElementById(number){ 
-            rever = number.reverse() {
-                for( let i=0; i < rever.length; i++){
-                    (rever[i] ){                             //esta en la posición par 
-                        cuenta += rever [i]
-                    }
-                         
-                    }
-                   
-
-
-            }
-        
-        
-            (numero[2,4,6,8,10,12,14,16] )
-        
-
-    
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-import validator from './validator.js';
-console.log(validator);*/
+});

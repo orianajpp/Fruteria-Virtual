@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1 class=>Frutería Virtual</h1>
+    <header class="superior" id="superior">
+      <h1>Frutería Virtual</h1>
       <div class="inicio">
       <button class="inicio-sesion">Inciar sesión</button>
     </div>
@@ -121,26 +121,26 @@
           </div>
 
 
-          <div class="datos-ep"></div>
-                <div>
-                  <label class="datos1" >Nombre de cliente</label>
+          
+                <div class="datos-etiquetas">
+                  <label>Nombre del cliente</label>
                 </div>
                 <div>
-                  <input class="input" type="text" placeholder="Nombre y Apellido">
+                  <input class="input-tipo3" type="text" placeholder="Nombre y Apellido">
+                </div>
+                <div class="datos-etiquetas">
+                  <label>Dirección de envío</label>
                 </div>
                 <div>
-                  <label class="datos1">Dirección de envío</label>
+                  <textarea class="input-tipo1"  name="Dirección de envío" id="" cols="30" rows="1"></textarea>
+                </div>
+                <div class="datos-etiquetas">
+                  <label>Teléfono de contacto</label>
                 </div>
                 <div>
-                  <textarea class="input"  name="Dirección de envío" id="" cols="10" rows="1"></textarea>
+                  <input class="input-tipo3" type="text" placeholder="e.j 9 416 636 50">
                 </div>
-                <div>
-                  <label class="datos1">Teléfono de contacto</label>
-                </div>
-                <div>
-                  <input class="input" type="text" placeholder="e.j 9 416 636 50">
-                </div>
-          </div>
+          
           
 
 
@@ -149,64 +149,72 @@
           </div>
           
           
-          <div class="datos-epp">
-                <div class="datos1">
+          
+                <div class="datos-etiquetas">
                   <label >Tipo de tarjeta</label>
                 </div>
-                <div>
-                  <input type="radio" name="Visa" id="tdc">
-                </div>
-                <div class="tdc">
+                
+                <div>             
+
+                  <input type="radio" name="visa" id="visa">
+                  <img  width="35px" height="20px" class="tdc-imag" src="/Imagenes/visa.JPG" alt="visa">
+              
+                
+              
 
                   <input type="radio" name="Master Card" id="master">
-                  <img  width="10px" height="10px" class="tdc-imag" src="/Imagenes/visa.JPG" alt="visa">
-              
-                </div>
-                <div class="tdc">
+                  <img width="35px" height="20px" class="tdc-imag" src="/Imagenes/master1.JPG" alt="master">
+                
+                </div> 
 
-                  <img width="10px" height="10px" class="tdc-imag" src="/Imagenes/master1.JPG" alt="master">
-                  <label class="datos1">Nombre de la tarjeta jhfgjhdf</label>
-
+                <div class="datos-etiquetas">
+                  <label>Nombre de la tarjeta</label>
                 </div>
                 <div>
-                  <input class="input" type="text" placeholder="Nombre impreso en la tarjeta">
+                  <input class="input-tipo1" type="text" placeholder="Nombre impreso en la tarjeta">
+                </div>
+                <div class="datos-etiquetas">
+                  <label>Número de la tarjeta</label>
                 </div>
                 <div>
-                  <label class="datos1">Número de la tarjeta</label>
+                  <input class="input-tipo3" id="tdcNumber" type="text" maxlength="16" minlength="9" autocomplete="off"  placeholder="e.j 5862 6854 2663 2415"  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required>
                 </div>
-                <div>
-                  <input class="input" id="tdc" type="text" maxlength="16" placeholder="e.j 5862 6854 2663 2415" required>
-                </div>
-                <div>
+                <div class="datos-etiquetas">
                   <label class="datos1">Fecha de expiración</label>
                 </div>
                 <div>
                   <input class="input" type="text" placeholder="MM/AAAA">
                 </div>
-                <div>
-                  <label class="datos1">Código de verificación</label>
+                <div class="datos-etiquetas">
+                  <label>Código de verificación</label>
+                </div>
                 <div>
                   <input class="input" type="text" maxlength="3" placeholder="e.j 268"> 
                 </div>
-          </div>
+          
 
           
 
 
             <div class="boton">
-                <button class="Pagar" id="pagar" type="submit">Pagar</button>
+                <button class="Pagar" id="pagar" type="button">Pagar</button>
             </div>
 
           
         </form>
-    
+        <div class="respuesta">
+          <h2 id="respuesta"></h2>
+        </div>
+
+
+
   </section>
 
 </main>
        
 
     
-<footer>
+<footer id="pie">
       
       <nav>
         <a href="#">Condiciones</a>

@@ -5,7 +5,7 @@
     border: none;
     text-decoration: none;
     transition: all .2s linear;
-    text-transform: capitalize;
+    
 }
 
 
@@ -20,10 +20,10 @@ html{
 
 
 
-main{
+main, header, footer{
     display: flex;
     justify-content: center;
-    align-items: center;
+    
 
 }
 
@@ -50,6 +50,7 @@ h3{
 header{
     display: flex;
     flex-direction: column;
+    height: 90px;
     
 }
  
@@ -58,15 +59,21 @@ header{
     margin: 10px;
 }
 
-.inicio-sesion{
+/*botones*/
+
+.inicio-sesion, .Pagar {
     padding: 4px 8px;
     background-color: black;
     color: white;
     font-family: 'Comfortaa', cursive;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgb(218, 225, 225);
-    
+}
 
+.boton{
+    text-align: center;
+    margin-top: 10px;
+    padding: 4px, 8px, 4px, 8px;
 }
 
 .inicio-sesion:hover{
@@ -101,7 +108,6 @@ header{
 }
 .frutas{                           /*lo coloco aquí por lo de la cascada*/
     opacity: 0.3;
-
 }
 .producto-boton{
     background-color: white;
@@ -125,71 +131,103 @@ header{
 
 
 /*CSS sección formulario - Ventana modal de solicitud de tarjeta*/
-
+label{
+    font-size: small;
+}
 .formulario-pago {
   
     display: none;
     position: fixed;
     opacity: 0;
     pointer-events: none;
+    justify-content: center;
+   
+    
+    
    
 
 }
-.prendeFormulario{
+.prendeFormulario, .respuesta{
     display: flex;
     position: fixed;
     opacity: 1;
     pointer-events: auto;
-    z-index: 1;
+    
 }
+
 
 #formulario {
     font-family: 'Comfortaa', cursive;
     background-color: white;
-    border-style: ridge;
-    border-radius: 5%;
     width: 300px;
-    height: 500px;
-    padding: 20px;
-    float: left;
-    overflow: hidden;
+    height: 540px;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
     display: block;
-    box-shadow: 0 10px 15px ;
-    box-shadow: 0 4px 8px rgb(218, 225, 225);   
+    box-shadow: 0 4px 8px rgb(152, 155, 155);  
+     
 }
-
- .datos-ep datos-epp{
-    text-align: left;
-
- }   
 
 .datos{
     font-family: 'Comfortaa', cursive;
-    font-size: larger;
-    font-weight: bolder;
+    font-size: large;
+    font-weight: 700;
     text-align: center;
-    padding: 20px;
+    padding-top: 20px;
+    
 }
-
-.input{
-    border-radius: 2.5px;
-    background-color: rgb(218, 219, 223);
-    font-family: 'Comfortaa', cursive;
-    font-size: xx-small;
+.datos-etiquetas{
     padding: 4px;
 }
 
-
+.input, .input-tipo1,.input-tipo2, .input-tipo3{
+    border-radius: 2.5px;
+    background-color: rgb(240, 240, 242);
+    font-family: 'Comfortaa', cursive;
+    font-size: small;
+    padding: 2px;
+    width: 80px;
+   
+}
+.input-tipo1{
+    width: 280px;
+}
+.input-tipo2{
+    width: 300px;
+}
+.input-tipo3{
+    width: 200px;
+}
 
 .tdc-img{
     width: 1px;
     height: 1px;
     
 }
-.datos1{
-    margin: 10px;
-}
   
+/*CSS de veredicto de las validaciones*/
+
+.respuesta h2{
+    font-family: 'Comfortaa', cursive;
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    box-shadow: 0 4px 8px rgb(152, 155, 155); 
+    z-index: 30;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    position: fixed;
+}
+
+
+
+
    
 /*CSS del footer*/
 

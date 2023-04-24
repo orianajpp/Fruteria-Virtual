@@ -16,36 +16,39 @@
 
 ## 1. Preámbulo
 
-El [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn),
-también llamado algoritmo de módulo 10, es un método de suma de verificación,
-se utiliza para validar números de identificación; tales como el IMEI de los
-celulares, tarjetas de crédito, etc.
+La “Frutería-Virtual” es un proyecto que se concibe para realizar la validación de una tarjeta de crédito
+mediante la simulación de la compra de frutas en una plataforma web de muy fácil acceso, donde el usuario puede 
+“seleccionar y pagar” sus productos para que sean entregados en la puerta de sus casas, evitando que el cliente 
+abandone la comodidad de su hogar al trasladarse hasta las fruterías físicas.
 
-Este algoritmo es simple. Obtenemos la reversa del número a verificar (que
-solamente contiene dígitos [0-9]); a todos los números que ocupan una posición
-par se les debe multiplicar por dos, si este número es mayor o igual a 10,
-debemos sumar los dígitos del resultado; el número a verificar será válido si
-la suma de sus dígitos finales es un múltiplo de 10.
+La página web está estructurada de la siguiente manera:  
 
-![gráfica de algoritmo de Luhn](https://user-images.githubusercontent.com/12631491/217016579-865679e0-0949-4afd-b13f-d2ebba7a0c54.png)
+Primeramente, presenta una interfaz en la que se muestra al cliente los productos
 
-## 2. Resumen del proyecto
 
-En este proyecto tendrás que construir una aplicación web que le permita a un
-usuario validar el número de una tarjeta de crédito. Además, tendrás que
-implementar funcionalidad para ocultar todos los dígitos de una tarjeta menos
-los últimos cuatro.
+El detalle del producto se puede apreciar con un click sobre la fruta que se desea escoger y por medio de la aparicion de una ventana modal, se puede observar el costo, la presentación y la cantidad del producto requerido.
 
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se
-necesitaría validar una tarjeta de crédito y pensar en cómo debe ser esa
-experiencia de uso (qué pantallas, explicaciones, mensajes, colores, ¿marca?)
-etc.
 
-Como continuación del proyecto de preadmisión, volverás a trabajar sobre
-fundamentos de JavaScript, incluyendo conceptos como variables, condicionales,
-y funciones, así como eventos y manipulación básica del DOM, fundamentos de
-HTML y CSS. Mientras desarrollas este proyecto, te familiarizarás con nuevos
-conceptos también.
+Posteriormente, se van agregando productos al “carrito de compras” y se muestra el detalle de los productos a cancelar 
+
+
+Luego, al accionar el pago en el botón de pagar, aparece una ventana de pago, en la que se presenta la funcionalidad de la validación de la tarjeta.
+
+
+
+Por último y se activa, por medio de un evento click, la validación de los números ingresados en el input correspondiente y el resultado se entrega por medio de una ventana modal en la que aparece el número de la tarjeta enmascarado. 
+
+La validación de una tarjeta bancaria se realiza mediante el algoritmo de módulo 10 o mejor conocido como algoritmo de Luhn. Este se caracteriza por responder a los siguientes pasos: 
+
+1.- el número de la tarjeta se revierte y se toma cada número como el valor correspondiente a una posición.
+2.- el valor de las posiciones pares es multiplicado por 2
+4.- en caso de resultar un valor de 2 dígitos, los dígitos deben sumarse entre sí para obtener un valor de un dígito
+5.- en caso de resultar un valor de un solo dígito queda tal cual el valor obtenido
+6.- para el caso de las posiciones impares, el valor queda tal cual el valor original
+7.- una vez obtenidos los valores de cada posición (pares e impares), estos deben sumarse
+8.- para que el algoritmo resulte válido, el resultado de la suma debe ser múltiplo de 10, de lo contrario resultará inválido.
+A continuación, se ejemplifica en la siguiente imagen: 
+
 
 ### Los objetivos generales de este proyecto son los siguientes
 
@@ -57,19 +60,8 @@ conceptos también.
   en JavaScript
 * Implementar control de versiones con git (y la plataforma github)
 
-## 3. Consideraciones generales
 
-* Este proyecto lo resolvemos de manera **individual**.
-* El rango de tiempo estimado para completar el proyecto es de 1 a 3 Sprints.
-* Enfócate en aprender y no solamente en "completar" el proyecto.
-* Te sugerimos que no intentes saberlo todo antes de empezar a codear.
-  No te preocupes demasiado ahora por lo que _todavía_ no entiendas.
-  Irás aprendiendo.
 
-## 4. Hito: Criterios de aceptación mínimos del proyecto
-
-Estos son los requisitos que tu proyecto debe que cumplir para asegurar que tu
-trabajo cubra los objetivos principales.
 
 **1. Una interfaz que debe permitir a la usuaria:**
 
@@ -116,9 +108,8 @@ Si escribes un nuevo método para eso, hay que hacer pruebas unitarias.
 
 ## 6. Consideraciones técnicas
 
-La lógica del proyecto debe estar implementada completamente en JavaScript. En
-este proyecto NO está permitido usar librerías o frameworks, solo JavaScript
-puro también conocido como Vanilla JavaScript.
+La lógica del proyecto está implementada completamente en JavaScript.
+
 
 Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
 repositorio que contiene un _boilerplate_ con tests (pruebas). Un _boilerplate_
