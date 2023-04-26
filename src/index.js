@@ -14,16 +14,19 @@ const respuesta = document.getElementById("respuesta");
 const obtenHeader = document.getElementById("superior");
 const obtenFooter = document.getElementById("pie");
 
+const resto = content.classList.add("opacidadFondo") +
+obtenFooter.classList.add("opacidadFondo") +
+obtenHeader.classList.add("opacidadFondo");
+
 //Ejecución deeEventos del DOM
 abrir.addEventListener("click", () => {
   presentacion.classList.add("prendePresentacion") +
-    content.classList.add("opacidadFondo") +
-    obtenFooter.classList.add("opacidadFondo") +
-    obtenHeader.classList.add("opacidadFondo");
+   resto
 });
 
 comprar.addEventListener("click", () => {
   carritoCompras.classList.add("prendeCarritoCompras") +
+  
   content.classList.add("opacidadFondo") +
   obtenFooter.classList.add("opacidadFondo") +
   obtenHeader.classList.add("opacidadFondo");
