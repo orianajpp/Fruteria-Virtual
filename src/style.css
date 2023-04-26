@@ -1,263 +1,314 @@
-*{
-    margin: 0;  
-    padding: 0;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: all .2s linear;
-    
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
 }
 
-
-html{
-    font-size: 62.5%;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Comfortaa', cursive;
-    opacity: 1;
-    pointer-events: auto;
+html {
+  font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Comfortaa", cursive;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-
-
-main, header, footer{
-    display: flex;
-    justify-content: center;
-    
-
+main,
+header,
+footer {
+  display: flex;
+  justify-content: center;
 }
 
-h1{
-    margin-top: 50px;
-    margin-bottom: 5px;
-    text-align: center;
+h1 {
+  margin-top: 50px;
+  margin-bottom: 5px;
+  text-align: center;
 }
-h2{
-    padding-bottom: 0;
-    font-size: bold;
-    font-weight: 200;
-    
+h2 {
+  
+  font-size: bold;
+  font-weight: 200;
 }
-h3{
-    padding-bottom: 20px;
-    font-size: bold;
-    font-weight: 200;
+h3 {
+  padding-bottom: 20px;
+  font-size: bold;
+  font-weight: 200;
 }
 
 /* CSS header*/
 
-
-header{
-    display: flex;
-    flex-direction: column;
-    height: 90px;
-    
+header {
+  display: flex;
+  flex-direction: column;
+  height: 90px;
 }
- 
-.inicio{
-    text-align: end;
-    margin: 10px;
+
+.inicio {
+  text-align: end;
+  margin: 10px;
 }
 
 /*botones*/
 
-.inicio-sesion, .Pagar {
-    padding: 4px 8px;
-    background-color: black;
-    color: white;
-    font-family: 'Comfortaa', cursive;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgb(218, 225, 225);
+.inicio-sesion,
+.Pagar,
+.boton-carrito,
+.boton-pagar {
+  padding: 4px 8px;
+  background-color: black;
+  color: white;
+  font-family: "Comfortaa", cursive;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgb(218, 225, 225);
 }
 
-.boton{
-    text-align: center;
-    margin-top: 10px;
-    padding: 4px, 8px, 4px, 8px;
+.boton {
+  text-align: center;
+  margin-top: 10px;
+  padding: 4px, 8px, 4px, 8px;
 }
 
-.inicio-sesion:hover{
-    box-shadow: 0 6px 12px rgb(149, 154, 154);
+.inicio-sesion:hover,
+.boton-carrito:hover,
+.boton-pagar:hover {
+  box-shadow: 0 6px 12px rgb(149, 154, 154);
 }
-
+.div-carrito-pago {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
 
 /*CSS productos seccion frutas */
 
-.contenido1 .contenido2{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-   
-       
+.contenido1 .contenido2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-
-
-.producto{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-size: medium;
-    width: auto;
-    height: auto;
-    text-align: center;
-    opacity: 1;
-    pointer-events: auto;
-    
+.producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: medium;
+  width: auto;
+  height: auto;
+  text-align: center;
+  opacity: 1;
+  pointer-events: auto;
 }
-.frutas{                           /*lo coloco aquí por lo de la cascada*/
-    opacity: 0.3;
+.frutas {
+  /*lo coloco aquí por lo de la cascada*/
+  opacity: 0.3;
 }
-.producto-boton{
-    background-color: white;
-    font-family: 'Comfortaa', cursive;
-    margin: 20px;
-    width: 150px;
-    height: 180px;
-    box-shadow: 0 4px 8px rgb(218, 225, 225);
+.producto-boton {
+  background-color: white;
+  font-family: "Comfortaa", cursive;
+  margin: 20px;
+  width: 150px;
+  height: 200px;
+  box-shadow: 0 4px 8px rgb(218, 225, 225);
+  
 }
 .producto-boton:hover {
-    box-shadow: 0 10px 15px rgb(149, 154, 154);
+  box-shadow: 0 10px 15px rgb(149, 154, 154);
 }
 
-.imagen{
-    padding: 20px;
-    text-align: center;
-    width: 120px;
-    height: 120px;
-    box-sizing: border-box;
+.imagen {
+  padding: 20px;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  box-sizing: border-box;
 }
 
+/*modal presentación*/
+
+.presentacion {
+  pointer-events: none;
+  display: flex;
+  position: fixed;
+  opacity: 1;
+}
+
+.presentacion-contenido {
+  text-align: left;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.imagen1 {
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+.div-imagen1 {
+  text-align: center;
+}
+h2,
+.presentacion-titulo {
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.div-input {
+  display: flex;
+}
+
+/*modal carrito-compras*/
+
+.CarritoCompras {
+  pointer-events: none;
+  display: flex;
+  position: fixed;
+  opacity: 0;
+}
+.resumen-compra {
+  display: flex;
+  flex-direction: row;
+}
+.imagen2 {
+  width: 150px;
+  height: 150px;
+}
 
 /*CSS sección formulario - Ventana modal de solicitud de tarjeta*/
-label{
-    font-size: small;
+label {
+  font-size: small;
 }
 .formulario-pago {
-  
-    display: none;
-    position: fixed;
-    opacity: 0;
-    pointer-events: none;
-    justify-content: center;
-   
-    
-    
-   
-
+  display: none;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  justify-content: center;
 }
-.prendeFormulario, .respuesta{
-    display: flex;
-    position: fixed;
-    opacity: 1;
-    pointer-events: auto;
-    
+.prendeFormulario,
+.respuesta,
+.prende-presentacion,
+.prendeCarritoCompras {
+  display: flex;
+  position: fixed;
+  opacity: 1;
+  pointer-events: auto;
 }
-
-
-#formulario {
-    font-family: 'Comfortaa', cursive;
-    background-color: white;
-    width: 300px;
-    height: 540px;
-    border-radius: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    display: block;
-    box-shadow: 0 4px 8px rgb(152, 155, 155);  
-     
+.prende-presentacion {
+  z-index: 10;
+}
+.prendeFormulario {
+  z-index: 30;
+}
+.prendeCarritoCompras {
+  z-index: 20;
+}
+.respuesta {
+  z-index: 40;
 }
 
-.datos{
-    font-family: 'Comfortaa', cursive;
-    font-size: large;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 20px;
-    
-}
-.datos-etiquetas{
-    padding: 4px;
-}
-
-.input, .input-tipo1,.input-tipo2, .input-tipo3{
-    border-radius: 2.5px;
-    background-color: rgb(240, 240, 242);
-    font-family: 'Comfortaa', cursive;
-    font-size: small;
-    padding: 2px;
-    width: 80px;
-   
-}
-.input-tipo1{
-    width: 280px;
-}
-.input-tipo2{
-    width: 300px;
-}
-.input-tipo3{
-    width: 200px;
+#formulario,
+.presentacion,
+.carritoCompras {
+  font-family: "Comfortaa", cursive;
+  background-color: white;
+  width: 300px;
+  height: 540px;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: block;
+  box-shadow: 0 4px 8px rgb(152, 155, 155);
 }
 
-.tdc-img{
-    width: 1px;
-    height: 1px;
-    
+.datos {
+  font-family: "Comfortaa", cursive;
+  font-size: large;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 20px;
 }
-  
+.datos-etiquetas {
+  padding: 4px;
+}
+
+.input,
+.input-tipo1,
+.input-tipo2,
+.input-tipo3,
+.input-numero {
+  border-radius: 2.5px;
+  background-color: rgb(240, 240, 242);
+  font-family: "Comfortaa", cursive;
+  font-size: small;
+  padding: 2px;
+  width: 80px;
+}
+.input-tipo1 {
+  width: 280px;
+}
+.input-tipo2 {
+  width: 300px;
+}
+.input-tipo3 {
+  width: 200px;
+}
+
+.tdc-img {
+  width: 1px;
+  height: 1px;
+}
+.input-numero {
+  width: 40px;
+  height: 20px;
+}
+
+.div-input {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*CSS de veredicto de las validaciones*/
 
 .respuesta h2{
-    font-family: 'Comfortaa', cursive;
-    background-color: white;
-    width: 200px;
-    height: 100px;
-    border-radius: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    display: flex;
-    box-shadow: 0 4px 8px rgb(152, 155, 155); 
-    z-index: 30;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    position: fixed;
+  font-family: "Comfortaa", cursive;
+  background-color: white;
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  box-shadow: 0 4px 8px rgb(152, 155, 155);
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  position: fixed;
+  
 }
 
-
-
-
-   
 /*CSS del footer*/
 
-footer{
-    display: flex;
-    justify-content: center;
-
+footer {
+  display: flex;
+  justify-content: center;
 }
 
-nav{
-    display: flex;
-    flex-direction: column;
-    padding-right: 400px;
-    margin-right: 0;
+nav {
+  display: flex;
+  flex-direction: column;
+  padding-right: 400px;
+  margin-right: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#contenido{
+    border: 1px solid red;
+}
+#presentacion{
+    border: 1px solid blue;
+}
