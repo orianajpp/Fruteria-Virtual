@@ -7,7 +7,7 @@ const comprar = document.getElementById("comprar");
 const carritoCompras = document.getElementById("carritoCompras");
 const botonPagar = document.getElementById("botonPagar");
 const formularioDePago = document.getElementById("formularioDePago");
-const contenido = document.getElementById("contenido");
+const content = document.getElementById("content");
 const pagar = document.getElementById("pagar");
 const respuesta = document.getElementById("respuesta");
 
@@ -16,26 +16,24 @@ const obtenFooter = document.getElementById("pie");
 
 //Ejecución deeEventos del DOM
 abrir.addEventListener("click", () => {
-  presentacion.classList.add("prende-presentacion") +
-    contenido.classList.add("frutas") +
-    obtenFooter.classList.add("frutas") +
-    obtenHeader.classList.add("frutas");
+  presentacion.classList.add("prendePresentacion") +
+    content.classList.add("opacidadFondo") +
+    obtenFooter.classList.add("opacidadFondo") +
+    obtenHeader.classList.add("opacidadFondo");
 });
 
 comprar.addEventListener("click", () => {
   carritoCompras.classList.add("prendeCarritoCompras") +
-    presentacion.classList.add("frutas") +
-    contenido.classList.add("frutas") +
-    obtenFooter.classList.add("frutas") +
-    obtenHeader.classList.add("frutas");
+  content.classList.add("opacidadFondo") +
+  obtenFooter.classList.add("opacidadFondo") +
+  obtenHeader.classList.add("opacidadFondo");
 });
 
 botonPagar.addEventListener("click", () => {
   formularioDePago.classList.add("prendeFormulario") +
-    presentacion.classList.add("frutas") +
-    contenido.classList.add("frutas") +
-    obtenFooter.classList.add("frutas") +
-    obtenHeader.classList.add("frutas");
+  content.classList.add("opacidadFondo") +
+  obtenFooter.classList.add("opacidadFondo") +
+  obtenHeader.classList.add("opacidadFondo");
 });
 /*pagar.addEventListener("click", () => {
   respuesta.classList.add("prendeRespuesta") + presentacion.classList.add("frutas") + contenido.classList.add("frutas") + obtenFooter.classList.add("frutas") + obtenHeader.classList.add("frutas");

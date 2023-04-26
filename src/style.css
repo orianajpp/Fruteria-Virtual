@@ -1,10 +1,12 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+*{
   margin: 0;
   padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  /* transition: all 0.2s linear; */
   outline: none;
-  border: none;
-  text-decoration: none;
-  transition: all 0.2s linear;
 }
 
 html {
@@ -16,48 +18,36 @@ html {
   pointer-events: auto;
 }
 
-main,
-header,
-footer {
+
+
+
+body{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-family: "Comfortaa", cursive;
 }
 
+
+
 h1 {
-  margin-top: 50px;
-  margin-bottom: 5px;
-  text-align: center;
+  font-weight: 300;
 }
+
 h2 {
-  
   font-size: bold;
   font-weight: 200;
 }
+
 h3 {
   padding-bottom: 20px;
   font-size: bold;
   font-weight: 200;
 }
 
-/* CSS header*/
-
-header {
-  display: flex;
-  flex-direction: column;
-  height: 90px;
-}
-
-.inicio {
-  text-align: end;
-  margin: 10px;
-}
-
-/*botones*/
-
-.inicio-sesion,
-.Pagar,
-.boton-carrito,
-.boton-pagar {
+.btn {
   padding: 4px 8px;
   background-color: black;
   color: white;
@@ -65,6 +55,7 @@ header {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgb(218, 225, 225);
 }
+
 
 .boton {
   text-align: center;
@@ -83,221 +74,53 @@ header {
   margin-top: 30px;
 }
 
-/*CSS productos seccion frutas */
 
-.contenido1 .contenido2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
-.producto {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-size: medium;
-  width: auto;
-  height: auto;
-  text-align: center;
-  opacity: 1;
-  pointer-events: auto;
-}
-.frutas {
-  /*lo coloco aquí por lo de la cascada*/
-  opacity: 0.3;
-}
-.producto-boton {
-  background-color: white;
-  font-family: "Comfortaa", cursive;
-  margin: 20px;
-  width: 150px;
-  height: 200px;
-  box-shadow: 0 4px 8px rgb(218, 225, 225);
-  
-}
-.producto-boton:hover {
-  box-shadow: 0 10px 15px rgb(149, 154, 154);
+
+
+a{
+  text-decoration: none;
 }
 
-.imagen {
-  padding: 20px;
-  text-align: center;
-  width: 120px;
-  height: 120px;
-  box-sizing: border-box;
+img{
+  width: 100px;
 }
 
-/*modal presentación*/
 
-.presentacion {
-  pointer-events: none;
-  display: flex;
+header{
   position: fixed;
-  opacity: 1;
-}
-
-.presentacion-contenido {
-  text-align: left;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-.imagen1 {
-  padding: 20px;
-  width: 200px;
-  height: 200px;
-  box-sizing: border-box;
-  margin: 20px;
-}
-.div-imagen1 {
-  text-align: center;
-}
-h2,
-.presentacion-titulo {
-  font-weight: bolder;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.div-input {
-  display: flex;
-}
-
-/*modal carrito-compras*/
-
-.CarritoCompras {
-  pointer-events: none;
-  display: flex;
-  position: fixed;
-  opacity: 0;
-}
-.resumen-compra {
-  display: flex;
-  flex-direction: row;
-}
-.imagen2 {
-  width: 150px;
-  height: 150px;
-}
-
-/*CSS sección formulario - Ventana modal de solicitud de tarjeta*/
-label {
-  font-size: small;
-}
-.formulario-pago {
-  display: none;
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-  justify-content: center;
-}
-.prendeFormulario,
-.respuesta,
-.prende-presentacion,
-.prendeCarritoCompras {
-  display: flex;
-  position: fixed;
-  opacity: 1;
-  pointer-events: auto;
-}
-.prende-presentacion {
-  z-index: 10;
-}
-.prendeFormulario {
-  z-index: 30;
-}
-.prendeCarritoCompras {
-  z-index: 20;
-}
-.respuesta {
-  z-index: 40;
-}
-
-#formulario,
-.presentacion,
-.carritoCompras {
-  font-family: "Comfortaa", cursive;
-  background-color: white;
-  width: 300px;
-  height: 540px;
-  border-radius: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  display: block;
-  box-shadow: 0 4px 8px rgb(152, 155, 155);
-}
-
-.datos {
-  font-family: "Comfortaa", cursive;
-  font-size: large;
-  font-weight: 700;
-  text-align: center;
-  padding-top: 20px;
-}
-.datos-etiquetas {
-  padding: 4px;
-}
-
-.input,
-.input-tipo1,
-.input-tipo2,
-.input-tipo3,
-.input-numero {
-  border-radius: 2.5px;
-  background-color: rgb(240, 240, 242);
-  font-family: "Comfortaa", cursive;
-  font-size: small;
-  padding: 2px;
-  width: 80px;
-}
-.input-tipo1 {
-  width: 280px;
-}
-.input-tipo2 {
-  width: 300px;
-}
-.input-tipo3 {
-  width: 200px;
-}
-
-.tdc-img {
-  width: 1px;
-  height: 1px;
-}
-.input-numero {
-  width: 40px;
-  height: 20px;
-}
-
-.div-input {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  height: 90px;
 }
 
-/*CSS de veredicto de las validaciones*/
-
-.respuesta h2{
-  font-family: "Comfortaa", cursive;
-  background-color: white;
-  width: 200px;
-  height: 100px;
-  border-radius: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
+main{
   display: flex;
-  box-shadow: 0 4px 8px rgb(152, 155, 155);
   justify-content: center;
   align-items: center;
-  pointer-events: auto;
-  position: fixed;
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
   
 }
 
-/*CSS del footer*/
-
-footer {
+footer{
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  bottom: 0;
+  opacity: .5;
 }
+
+
 
 nav {
   display: flex;
@@ -306,9 +129,192 @@ nav {
   margin-right: 0;
 }
 
-#contenido{
-    border: 1px solid red;
+
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  gap: 30px;
+  height: auto;
+  padding: 100px 60px;
 }
-#presentacion{
-    border: 1px solid blue;
+
+
+
+.respuesta{
+  position: fixed;
+  border: 10px solid #000;
+  left:50%;
+  margin-left: -200px;
+  width: 400px;
+  top:50%;
+  margin-top: -125px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+
+.producto-boton {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fff;
+  margin-right: 10px; /* Agregar un margen derecho para separar los elementos */
+  margin-bottom: 10px; /* Agregar un margen inferior para separar las líneas de elementos */
+  margin: 20px;
+  width: 150px;
+  height: 200px;
+  box-shadow: 0 4px 8px rgb(218, 225, 225);
+}
+
+.producto-boton:nth-child(4n) {
+  margin-right: 0; /* Establecer el margen derecho a 0 para el último elemento de cada línea */
+}
+
+.producto-boton img{
+  height: 120px;
+  width: 120px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+
+.producto-boton:hover {
+  box-shadow: 0 10px 15px rgb(149, 154, 154);
+}
+
+
+
+
+input{
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+
+.card{
+  position: fixed;
+  display: none;
+  /*flex-direction: column;*/
+  align-items: center;
+  background-color: #fff;
+  left:50%;
+  margin-left: -150px;
+  width: 300px;
+  top:50%;
+  margin-top: -250px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(0 0 0 / .3);
+  padding: 30px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+
+
+.prendePresentacion, .prendeCarritoCompras, .prendeFormularioDePago, .prendeRespuesta{
+  display: flex;
+  pointer-events: auto;
+  opacity: 1;
+  position: fixed;
+}
+.prendePresentacion{
+  z-index: 100;
+}
+.prendeCarritoCompras{
+  z-index: 20;
+}
+.prendeFormularioDePago{
+  z-index: 30;
+}
+.respuesta{
+  z-index: 40;
+}
+.opacidadFondo{
+  opacity: 0.3;
+}
+
+.imagen1 {
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  margin: 20px;
+  text-align: center;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+.imagen2 {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+
+h3{
+  font-weight: 700;
+
+}
+
+.presentacion-titulo {
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.div-input {
+  display: flex;
+}
+
+
+.card-titulo{
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.horizontal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.horizontal2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.horizontal3{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.text1{
+  margin: 20px 0;
+  font-size: 12px;
+}
+
+.input1{
+  margin: 0 0 0 10px;
 }
