@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Futeria-Virtual</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="superior" id="superior">
+    <h1>Frutería Virtual</h1>
+    <button class="btn">Inciar sesión</button>
+  </header>
+
+<main>
+
+  <div class="content" id="content">
+    <button class="producto-boton" id="abrir">
+      <img class="imagen" src="./Imagenes/fresas.webp" alt="fresas">
+      <h2>Frutilla</h2>
+      <h3>Costo: 1200$</h3>
+    </button>
+    <button class="producto-boton">
+        <img class="imagen" src="./Imagenes/Cambur.webp" alt="cambur">
+        <h2>Plátanos</h2>
+        <h3>Costo: 1200$</h3>
+    </button>
+    <button class="producto-boton">
+        <img class="imagen" src="./Imagenes/kiwi.jpg" alt="kiwi">
+        <h2>Kiwi</h2>
+        <h3>Costo: 1200$</h3>
+    </button>
+    <button class="producto-boton">
+        <img class="imagen" src="./Imagenes/arandanos.jpeg" alt="arandanos">
+        <h2>Arandanos</h2>
+        <h3>Costo: 1200$</h3>
+    </button>
+    <button class="producto-boton">
+        <img class="imagen" src="./Imagenes/limon.jpg" alt="limon">
+        <h2>Limón</h2>
+        <h3>Costo: 1200$</h3>
+    </button>
+    <button class="producto-boton">
+        <img class="imagen" src="./Imagenes/sandia.jpg" alt="sandia">
+        <h2>Sandía</h2>
+        <h3>Costo: 1200$</h3>
+    </button>
+    <button class="producto-boton">
+        <img class="imagen" src="./Imagenes/uvas.webp" alt="uvas">
+        <h2>Uvas</h2>
+        <h3>Costo: 1200$</h3>
+    </button>
+    <button class="producto-boton">
+        <img class="imagen" src="./Imagenes/manzanas.jpg" alt="manzanas">
+        <h2>Manzanas</h2>
+        <h3>Costo: 1200$</h3>
+    </button>
+  </div>
+
+
+
+  <section id="presentacion" class="presentacion card">
+    <img src="./Imagenes/fresas.webp" alt="Fresas" class="imagen1">
+    <h2 class="card-titulo">Fresas</h2>
+    <div class="presentacion-contenido">
+      <p class="text1">Presentación: paquete de 500 gr</p>
+      <p class="text1">Costo por paquete: 1200$</p>
+      <div class="horizontal2">
+        <p class="text1">Cantidad:</p>
+        <input class="input1" type="number" value="1" max="100">
+      </div>
+      <div class="horizontal margen">
+        <button class="btn">Añadir al carrito</button>
+        <button class="btn btn-compra" id="comprar" >Comprar</button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section id="carritoCompras" class="carritoCompras card">
+    <h2 class="card-titulo">Carrito de Compras</h2>
+
+    <div class="horizontal3">
+      <img src="./Imagenes/fresas.webp" alt="fresas" class="imagen2">
+
+      <div class="info">
+        <h3>Fresas</h3>
+        <div class="horizontal3">
+          <p class="text1">Cantidad:</p>
+          <input class="input-numero" type="number" value="1" max="100">
+        </div>
+        <p>Monto: 1200$</p>
+      </div>
+
+    </div>
+  
+
+    <div class="resumen-pago margen">
+      <div class="horizontal">
+        <h3 class="costo">Sub Total:</h3>
+        <p>1200$</p>
+      </div>
+      <div class="horizontal">
+        <h3 class="costo">Monto de envío:</h3>
+        <p>1000$</p>
+      </div>
+      <div class="horizontal">
+        <h3 class="costo">Total a pagar:</h3>
+        <p>2200$</p>
+      </div>
+      <div class="horizontal margen">
+        <button class="btn">Seguir comprando</button>    
+        <button class="btn btn-pagar" id="botonPagar">Pagar</button>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+  
+
+
+
+  
+    <section class="formulario-pago" id="formularioDePago">
+      <form action="" id="formulario" class="formulario">
+
+        <h3 class="card-titulo">Datos de envío</h3>
+        
+        <div class="datos-etiquetas">
+          <label class="etiqueta" for="nombre-cliente">Nombre del cliente</label>
+          <input class="input tipo1" type="text" placeholder="Nombre y Apellido" name="nombre-cliente">
+        </div>
+
+        <div class="datos-etiquetas">
+          <label class="etiqueta" for="Dirección de envío">Dirección de envío</label>
+          <textarea class="input" name="Dirección de envío" id="" cols="30" rows="1"></textarea>
+        </div>
+
+        <div class="datos-etiquetas">
+          <label class="etiqueta">Teléfono de contacto</label>
+          <input class="input tipo2" type="text" placeholder="e.j 9 416 636 50">
+        </div>
+
+        
+        <h3 class="card-titulo">Datos de pago</h3>
+
+        <label class="etiqueta" >Tipo de tarjeta</label>
+        
+        <div class="datos-etiquetas radio-botones">
+          <div class="img-radio">
+            <input type="radio" name="visa" class="radio">
+            <img class="imag-visa-master" src="./Imagenes/visa.JPG" alt="visa">
+          </div>
+          <div class="img-radio">
+            <input type="radio" name="Master Card" class="radio">
+            <img class="imag-visa-master" src="./Imagenes/master1.JPG" alt="master">
+          </div>  
+        </div>
+
+        <div class="datos-etiquetas">
+          <label class="etiqueta">Nombre de la tarjeta</label>
+          <input class="input tipo1" type="text" placeholder="Nombre impreso en la tarjeta">
+        </div>
+
+        <div class="datos-etiquetas">
+          <label class="etiqueta">Número de la tarjeta</label>
+          <input class="input tipo4" id="tdcNumber" type="text" maxlength="16" minlength="9" autocomplete="off"
+            placeholder="e.j 5862 6854 2663 2415" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+            required>
+        </div>
+
+        <div class="horizontal">
+          <div class="datos-etiquetas">
+            <label class="etiqueta">Fecha de expiración</label>
+            <input class="input tipo3" type="text" placeholder="MM/AAAA">
+          </div>
+
+          <div class="datos-etiquetas">
+            <label class="etiqueta">CVV</label>
+            <input class="input tipo3" type="text" maxlength="3" placeholder="e.j 268">
+          </div>
+        </div>
+        <div class="boton">
+          <button class="btn" id="pagar" type="button">Pagar</button>
+        </div>
+      </form>
+
+      
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <section class="validacion" id="validacion" >
+      <h2 class="respuesta" id="respuesta"></h2> 
+  </section>
+
+
+
+
+  
+
+
+
+
+  
+
+</main>
+
+
+<footer id="pie">
+
+  <nav>
+    <a href="#">Condiciones</a>
+    <a href="#">Política de Privacidad</a>
+    <a href="#">Condiciones de Privacidad</a>
+    <a href="#">Declaración de Accesibilidad</a>
+  </nav>
+
+  <div class="redes-sociales">
+    <p>Siguenos en las redes sociales</p>
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44"
+      height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <rect x="4" y="4" width="16" height="16" rx="4" />
+      <circle cx="12" cy="12" r="3" />
+      <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44"
+      viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="44" height="44"
+      viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <rect x="3" y="5" width="18" height="14" rx="4" />
+      <path d="M10 9l5 3l-5 3z" />
+    </svg>
+  </div>
+</footer>
+
+
+
+<script src="./index.js" type="module"></script>
+</body>
+
+</html>

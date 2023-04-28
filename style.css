@@ -1,0 +1,356 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-family: "Comfortaa", cursive;
+}
+
+h1 {
+  font-weight: 600;
+ 
+}
+
+h2, h3{
+  font-family: "Comfortaa", cursive; 
+}
+
+
+
+/* botones*/
+.btn {
+  padding: 4px 10px;
+  background-color: black;
+  color: white;
+  font-family: "Comfortaa", cursive;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgb(218, 225, 225);
+}
+
+
+.boton {
+  text-align: center;
+  margin-top: 10px;
+  padding: 4px, 8px, 4px, 8px;
+}
+
+.btn:hover {
+  box-shadow: 0 6px 12px rgb(149, 154, 154);
+}
+
+.div-carrito-pago {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  width: 100px;
+}
+.img-radio{
+  margin-left: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+header{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  height: 90px;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+  
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  bottom: 0;
+  opacity: .5;
+}
+
+
+
+nav {
+  display: flex;
+  flex-direction: column;
+  padding-right: 400px;
+  margin-right: 0;
+}
+
+
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  gap: 30px;
+  height: auto;
+  padding: 100px 60px;
+}
+
+
+
+.validacion{
+  background-color: white;
+  position: fixed;
+  left:50%;
+  margin-left: -200px;
+  width: 400px;
+  top:50%;
+  margin-top: -125px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(0 0 0 / .3);
+  
+}
+.respuesta{
+
+text-align: center;
+margin: 90px;
+
+}
+
+
+.producto-boton {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fff;
+  margin-right: 10px; /* Agregar un margen derecho para separar los elementos */
+  margin-bottom: 10px; /* Agregar un margen inferior para separar las líneas de elementos */
+  margin: 20px;
+  width: 150px;
+  height: 200px;
+  box-shadow: 0 4px 8px rgb(218, 225, 225);
+}
+
+.producto-boton:nth-child(4n) {
+  margin-right: 0; /* Establecer el margen derecho a 0 para el último elemento de cada línea */
+}
+
+.producto-boton img{
+  height: 120px;
+  width: 120px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+
+.producto-boton:hover {
+  box-shadow: 0 10px 15px rgb(149, 154, 154);
+}
+
+
+
+
+input{
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 2px;
+  border-radius: 4px;
+  width: 40px;
+}
+
+
+.tipo1{
+  width: 200px;
+}
+.tipo2{
+  width: 100px;
+}
+.tipo3{
+  width: 70px;
+}
+.tipo4{
+  width: 150px;
+}
+.radio{
+  width: 15px;
+}
+
+.card{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  left:50%;
+  margin-left: -150px;
+  width: 300px;
+  top:50%;
+  margin-top: -250px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(0 0 0 / .3);
+  padding: 30px;
+  
+}
+.formulario-pago{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  left:50%;
+  margin-left: -180px;
+  width: 400px;
+  top:50%;
+  margin-top: -250px;
+  height: 550px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(0 0 0 / .3);
+  padding: 30px;
+}
+
+.opacidadFondo{
+  opacity: 0.3;
+}
+
+.imagen1 {
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  margin-left: 20px;
+  text-align: center;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+.imagen2 {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  background-color: #fff;
+}
+.imagen3{
+  object-fit: contain;
+}
+
+.imag-visa-master{
+  width: 35px;
+}
+h3{
+  font-weight: 700;
+
+}
+
+.presentacion-titulo {
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.div-input {
+  display: flex;
+}
+
+
+.card-titulo{
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.horizontal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  flex-wrap: wrap;
+}
+
+.horizontal2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  /*flex-wrap: wrap;*/
+}
+
+.horizontal3{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text1{
+  margin: 20px 0;
+  font-size: 12px;
+}
+.costo{
+ margin: 20px;
+}
+.carritoCompras{
+  padding: 40px;
+}
+.info{
+  margin-left: 10px;
+}
+.margen{
+  margin-top: 20px ;
+}
+.datos-etiquetas{
+  display: flex;
+  flex-direction: column;
+  margin-right: 45px;
+}
+.etiqueta{
+  font-size: small;
+  }
+.radio-botones{
+  margin-top: 20px ;
+  display: flex;
+  flex-direction: row;
+}
+label{
+  margin: 4px;
+}
+textarea{
+  border: 1px solid #000;
+  border-radius: 5px;
+}
