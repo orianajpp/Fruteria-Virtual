@@ -18,42 +18,42 @@
 
   <div class="content" id="content">
     <button class="producto-boton" id="abrir">
-      <img class="imagen" src="../Imagenes/fresas.webp" alt="fresas">
+      <img class="imagen" src="./Imagenes/fresas.webp" alt="fresas">
       <h2>Frutilla</h2>
       <h3>Costo: 1200$</h3>
     </button>
     <button class="producto-boton">
-        <img class="imagen" src="../Imagenes/Cambur.webp" alt="cambur">
+        <img class="imagen" src="./Imagenes/Cambur.webp" alt="cambur">
         <h2>Plátanos</h2>
         <h3>Costo: 1200$</h3>
     </button>
     <button class="producto-boton">
-        <img class="imagen" src="../Imagenes/kiwi.jpg" alt="kiwi">
+        <img class="imagen" src="./Imagenes/kiwi.jpg" alt="kiwi">
         <h2>Kiwi</h2>
         <h3>Costo: 1200$</h3>
     </button>
     <button class="producto-boton">
-        <img class="imagen" src="../Imagenes/arandanos.jpeg" alt="arandanos">
+        <img class="imagen" src="./Imagenes/arandanos.jpeg" alt="arandanos">
         <h2>Arandanos</h2>
         <h3>Costo: 1200$</h3>
     </button>
     <button class="producto-boton">
-        <img class="imagen" src="../Imagenes/limon.jpg" alt="limon">
+        <img class="imagen" src="./Imagenes/limon.jpg" alt="limon">
         <h2>Limón</h2>
         <h3>Costo: 1200$</h3>
     </button>
     <button class="producto-boton">
-        <img class="imagen" src="../Imagenes/sandia.jpg" alt="sandia">
+        <img class="imagen" src="./Imagenes/sandia.jpg" alt="sandia">
         <h2>Sandía</h2>
         <h3>Costo: 1200$</h3>
     </button>
     <button class="producto-boton">
-        <img class="imagen" src="../Imagenes/uvas.webp" alt="uvas">
+        <img class="imagen" src="./Imagenes/uvas.webp" alt="uvas">
         <h2>Uvas</h2>
         <h3>Costo: 1200$</h3>
     </button>
     <button class="producto-boton">
-        <img class="imagen" src="../Imagenes/manzanas.jpg" alt="manzanas">
+        <img class="imagen" src="./Imagenes/manzanas.jpg" alt="manzanas">
         <h2>Manzanas</h2>
         <h3>Costo: 1200$</h3>
     </button>
@@ -62,16 +62,16 @@
 
 
   <section id="presentacion" class="presentacion card">
-    <img src="/Imagenes/fresas.webp" alt="Fresas" class="imagen1">
+    <img src="./Imagenes/fresas.webp" alt="Fresas" class="imagen1">
     <h2 class="card-titulo">Fresas</h2>
     <div class="presentacion-contenido">
       <p class="text1">Presentación: paquete de 500 gr</p>
       <p class="text1">Costo por paquete: 1200$</p>
       <div class="horizontal2">
-        <span>Cantidad:</span>
-        <input class="input1" type="number" min="1" max="100">
+        <p class="text1">Cantidad:</p>
+        <input class="input1" type="number" value="1" max="100">
       </div>
-      <div class="horizontal">
+      <div class="horizontal margen">
         <button class="btn">Añadir al carrito</button>
         <button class="btn btn-compra" id="comprar" >Comprar</button>
       </div>
@@ -83,38 +83,37 @@
 
 
   <section id="carritoCompras" class="carritoCompras card">
-    <h2>Carrito de Compras</h2>
+    <h2 class="card-titulo">Carrito de Compras</h2>
 
     <div class="horizontal3">
-      <img src="../Imagenes/fresas.webp" alt="fresas" class="imagen2">
+      <img src="./Imagenes/fresas.webp" alt="fresas" class="imagen2">
 
       <div class="info">
-        <h3 class="card-titulo">Fresas</h3>
-        <div>
-          <span>Cantidad:</span>
-          <input class="input-numero" type="number" min="1" max="100">
+        <h3>Fresas</h3>
+        <div class="horizontal3">
+          <p class="text1">Cantidad:</p>
+          <input class="input-numero" type="number" value="1" max="100">
         </div>
-        <br>
         <p>Monto: 1200$</p>
       </div>
 
     </div>
   
 
-    <div class="resumen-pago">
-      <div class="resumen">
-        <h3>Sub Total:</h3>
+    <div class="resumen-pago margen">
+      <div class="horizontal">
+        <h3 class="costo">Sub Total:</h3>
         <p>1200$</p>
       </div>
-      <div class="resumen">
-        <h3>Monto de envío:</h3>
+      <div class="horizontal">
+        <h3 class="costo">Monto de envío:</h3>
         <p>1000$</p>
       </div>
-      <div class="resumen">
-        <h3>Total a pagar:</h3>
+      <div class="horizontal">
+        <h3 class="costo">Total a pagar:</h3>
         <p>2200$</p>
       </div>
-      <div class="horizontal">
+      <div class="horizontal margen">
         <button class="btn">Seguir comprando</button>    
         <button class="btn btn-pagar" id="botonPagar">Pagar</button>
       </div>
@@ -131,65 +130,69 @@
 
 
 
-    <!-- 4) card carrito compra -->
-    <section class="formulario-pago card" id="formularioDePago">
+  
+    <section class="formulario-pago" id="formularioDePago">
       <form action="" id="formulario" class="formulario">
 
-        <h3>Datos de envío</h3>
+        <h3 class="card-titulo">Datos de envío</h3>
         
         <div class="datos-etiquetas">
-          <label for="nombre-cliente">Nombre del cliente</label>
-          <input class="input-tipo3" type="text" placeholder="Nombre y Apellido" name="nombre-cliente">
+          <label class="etiqueta" for="nombre-cliente">Nombre del cliente</label>
+          <input class="input tipo1" type="text" placeholder="Nombre y Apellido" name="nombre-cliente">
         </div>
 
         <div class="datos-etiquetas">
-          <label for="Dirección de envío">Dirección de envío</label>
-          <textarea class="input-tipo1" name="Dirección de envío" id="" cols="30" rows="1"></textarea>
+          <label class="etiqueta" for="Dirección de envío">Dirección de envío</label>
+          <textarea class="input" name="Dirección de envío" id="" cols="30" rows="1"></textarea>
         </div>
 
         <div class="datos-etiquetas">
-          <label>Teléfono de contacto</label>
-          <input class="input-tipo3" type="text" placeholder="e.j 9 416 636 50">
+          <label class="etiqueta">Teléfono de contacto</label>
+          <input class="input tipo2" type="text" placeholder="e.j 9 416 636 50">
         </div>
 
         
-        <h3>Datos de pago</h3>
+        <h3 class="card-titulo">Datos de pago</h3>
+
+        <label class="etiqueta" >Tipo de tarjeta</label>
         
-        <div class="datos-etiquetas">
-          <span>Tipo de tarjeta</span>
-
-          <input type="radio" name="visa" id="visa">
-          <img width="35px" height="20px" class="tdc-imag" src="../Imagenes/visa.JPG" alt="visa">
-
-          <input type="radio" name="Master Card" id="master">
-          <img width="35px" height="20px" class="tdc-imag" src="../Imagenes/master1.JPG" alt="master">
-
+        <div class="datos-etiquetas radio-botones">
+          <div class="img-radio">
+            <input type="radio" name="visa" class="radio">
+            <img class="imag-visa-master" src="./Imagenes/visa.JPG" alt="visa">
+          </div>
+          <div class="img-radio">
+            <input type="radio" name="Master Card" class="radio">
+            <img class="imag-visa-master" src="./Imagenes/master1.JPG" alt="master">
+          </div>  
         </div>
 
         <div class="datos-etiquetas">
-          <label>Nombre de la tarjeta</label>
-          <input class="input-tipo1" type="text" placeholder="Nombre impreso en la tarjeta">
+          <label class="etiqueta">Nombre de la tarjeta</label>
+          <input class="input tipo1" type="text" placeholder="Nombre impreso en la tarjeta">
         </div>
 
         <div class="datos-etiquetas">
-          <label>Número de la tarjeta</label>
-          <input class="input-tipo3" id="tdcNumber" type="text" maxlength="16" minlength="9" autocomplete="off"
+          <label class="etiqueta">Número de la tarjeta</label>
+          <input class="input tipo4" id="tdcNumber" type="text" maxlength="16" minlength="9" autocomplete="off"
             placeholder="e.j 5862 6854 2663 2415" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
             required>
         </div>
 
-        <div class="datos-etiquetas">
-          <label class="datos1">Fecha de expiración</label>
-          <input class="input" type="text" placeholder="MM/AAAA">
+        <div class="horizontal">
+          <div class="datos-etiquetas">
+            <label class="etiqueta">Fecha de expiración</label>
+            <input class="input tipo3" type="text" placeholder="MM/AAAA">
+          </div>
+
+          <div class="datos-etiquetas">
+            <label class="etiqueta">CVV</label>
+            <input class="input tipo3" type="text" maxlength="3" placeholder="e.j 268">
+          </div>
         </div>
-
-        <div class="datos-etiquetas">
-          <label>Código de verificación</label>
-          <input class="input" type="text" maxlength="3" placeholder="e.j 268">
+        <div class="boton">
+          <button class="btn" id="pagar" type="button">Pagar</button>
         </div>
-
-        <button class="Pagar" id="pagar" type="button">Pagar</button>
-
       </form>
 
       
@@ -206,11 +209,9 @@
 
 
 
-    <section class="respuesta" id="respuesta">
-    </section>
-
-
-
+    <section class="validacion" id="validacion" >
+      <h2 class="respuesta" id="respuesta"></h2> 
+  </section>
 
 
 
@@ -262,7 +263,7 @@
 
 
 
-
+<script src="./index.js" type="module"></script>
 </body>
 
 </html>

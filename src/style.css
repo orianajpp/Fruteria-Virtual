@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 *{
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  /* transition: all 0.2s linear; */
   outline: none;
 }
 
@@ -13,13 +11,8 @@ html {
   font-size: 62.5%;
   display: flex;
   flex-direction: column;
-  font-family: "Comfortaa", cursive;
-  opacity: 1;
-  pointer-events: auto;
+  
 }
-
-
-
 
 body{
   display: flex;
@@ -30,25 +23,20 @@ body{
   font-family: "Comfortaa", cursive;
 }
 
-
-
 h1 {
-  font-weight: 300;
+  font-weight: 600;
+ 
 }
 
-h2 {
-  font-size: bold;
-  font-weight: 200;
+h2, h3{
+  font-family: "Comfortaa", cursive; 
 }
 
-h3 {
-  padding-bottom: 20px;
-  font-size: bold;
-  font-weight: 200;
-}
 
+
+/* botones*/
 .btn {
-  padding: 4px 8px;
+  padding: 4px 10px;
   background-color: black;
   color: white;
   font-family: "Comfortaa", cursive;
@@ -63,20 +51,15 @@ h3 {
   padding: 4px, 8px, 4px, 8px;
 }
 
-.inicio-sesion:hover,
-.boton-carrito:hover,
-.boton-pagar:hover {
+.btn:hover {
   box-shadow: 0 6px 12px rgb(149, 154, 154);
 }
+
 .div-carrito-pago {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-
-
-
-
 
 a{
   text-decoration: none;
@@ -85,7 +68,11 @@ a{
 img{
   width: 100px;
 }
-
+.img-radio{
+  margin-left: 50px;
+  display: flex;
+  gap: 20px;
+}
 
 header{
   position: fixed;
@@ -146,9 +133,9 @@ nav {
 
 
 
-.respuesta{
+.validacion{
+  background-color: white;
   position: fixed;
-  border: 10px solid #000;
   left:50%;
   margin-left: -200px;
   width: 400px;
@@ -156,6 +143,14 @@ nav {
   margin-top: -125px;
   height: 250px;
   border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(0 0 0 / .3);
+  
+}
+.respuesta{
+
+text-align: center;
+margin: 90px;
+
 }
 
 
@@ -196,13 +191,29 @@ input{
   border: 1px solid #000;
   padding: 2px;
   border-radius: 4px;
+  width: 40px;
 }
 
 
+.tipo1{
+  width: 200px;
+}
+.tipo2{
+  width: 100px;
+}
+.tipo3{
+  width: 70px;
+}
+.tipo4{
+  width: 150px;
+}
+.radio{
+  width: 15px;
+}
+
 .card{
   position: fixed;
-  display: none;
-  /*flex-direction: column;*/
+  display: flex;
   align-items: center;
   background-color: #fff;
   left:50%;
@@ -214,30 +225,24 @@ input{
   border-radius: 20px;
   box-shadow: 5px 5px 5px 5px rgba(0 0 0 / .3);
   padding: 30px;
-  pointer-events: none;
-  opacity: 0;
+  
 }
-
-
-
-.prendePresentacion, .prendeCarritoCompras, .prendeFormularioDePago, .prendeRespuesta{
-  display: flex;
-  pointer-events: auto;
-  opacity: 1;
+.formulario-pago{
   position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  left:50%;
+  margin-left: -180px;
+  width: 400px;
+  top:50%;
+  margin-top: -250px;
+  height: 550px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(0 0 0 / .3);
+  padding: 30px;
 }
-.prendePresentacion{
-  z-index: 100;
-}
-.prendeCarritoCompras{
-  z-index: 20;
-}
-.prendeFormularioDePago{
-  z-index: 30;
-}
-.respuesta{
-  z-index: 40;
-}
+
 .opacidadFondo{
   opacity: 0.3;
 }
@@ -247,20 +252,25 @@ input{
   width: 200px;
   height: 200px;
   box-sizing: border-box;
-  margin: 20px;
+  margin-left: 20px;
   text-align: center;
   object-fit: contain;
   background-color: #fff;
 }
 
 .imagen2 {
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
   background-color: #fff;
 }
+.imagen3{
+  object-fit: contain;
+}
 
-
+.imag-visa-master{
+  width: 35px;
+}
 h3{
   font-weight: 700;
 
@@ -279,7 +289,8 @@ h3{
 .card-titulo{
   font-weight: bolder;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin: 10px;
+  text-align: center;
 }
 
 .horizontal{
@@ -287,8 +298,7 @@ h3{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
-  gap: 20px;
+  
   flex-wrap: wrap;
 }
 
@@ -297,16 +307,14 @@ h3{
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 20px;
   gap: 20px;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
 }
 
 .horizontal3{
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 20px;
   flex-wrap: wrap;
 }
 
@@ -314,7 +322,35 @@ h3{
   margin: 20px 0;
   font-size: 12px;
 }
-
-.input1{
-  margin: 0 0 0 10px;
+.costo{
+ margin: 20px;
+}
+.carritoCompras{
+  padding: 40px;
+}
+.info{
+  margin-left: 10px;
+}
+.margen{
+  margin-top: 20px ;
+}
+.datos-etiquetas{
+  display: flex;
+  flex-direction: column;
+  margin-right: 45px;
+}
+.etiqueta{
+  font-size: small;
+  }
+.radio-botones{
+  margin-top: 20px ;
+  display: flex;
+  flex-direction: row;
+}
+label{
+  margin: 4px;
+}
+textarea{
+  border: 1px solid #000;
+  border-radius: 5px;
 }

@@ -10,39 +10,54 @@ const formularioDePago = document.getElementById("formularioDePago");
 const content = document.getElementById("content");
 const pagar = document.getElementById("pagar");
 const respuesta = document.getElementById("respuesta");
-
 const obtenHeader = document.getElementById("superior");
 const obtenFooter = document.getElementById("pie");
+const validacion = document.getElementById("validacion")
+// Llamado de clase común al abrir las modales
 
-const resto = content.classList.add("opacidadFondo") +
-obtenFooter.classList.add("opacidadFondo") +
-obtenHeader.classList.add("opacidadFondo");
+
+// Apagado de modales 
+
+presentacion.style.display = "none";
+carritoCompras.style.display = "none";
+formularioDePago.style.display = "none";
+validacion.style.display = "none";
+
 
 //Ejecución deeEventos del DOM
 abrir.addEventListener("click", () => {
-  presentacion.classList.add("prendePresentacion") +
-   resto
+  presentacion.style.display = "block"; 
+  content.classList.add("opacidadFondo");
+  obtenFooter.classList.add("opacidadFondo");
+  obtenHeader.classList.add("opacidadFondo");
 });
 
 comprar.addEventListener("click", () => {
-  carritoCompras.classList.add("prendeCarritoCompras") +
-  
-  content.classList.add("opacidadFondo") +
-  obtenFooter.classList.add("opacidadFondo") +
+  carritoCompras.style.display = "block";
+  presentacion.style.display = "none";
+  content.classList.add("opacidadFondo");
+  obtenFooter.classList.add("opacidadFondo");
   obtenHeader.classList.add("opacidadFondo");
+  
 });
 
 botonPagar.addEventListener("click", () => {
-  formularioDePago.classList.add("prendeFormulario") +
-  content.classList.add("opacidadFondo") +
-  obtenFooter.classList.add("opacidadFondo") +
+  formularioDePago.style.display = "block";
+  carritoCompras.style.display = "none";
+  content.classList.add("opacidadFondo");
+  obtenFooter.classList.add("opacidadFondo");
   obtenHeader.classList.add("opacidadFondo");
 });
-/*pagar.addEventListener("click", () => {
-  respuesta.classList.add("prendeRespuesta") + presentacion.classList.add("frutas") + contenido.classList.add("frutas") + obtenFooter.classList.add("frutas") + obtenHeader.classList.add("frutas");
-});*/
+
 pagar.addEventListener("click", () => {
-  
+  formularioDePago.style.display = "none";
+  content.classList.add("opacidadFondo");
+  obtenFooter.classList.add("opacidadFondo");
+  obtenHeader.classList.add("opacidadFondo");
+  validacion.style.display = "block";
+
+
+  //resto.style.display = "block";
   const obtenNumero = document.getElementById("tdcNumber").value;
   const tarjetaValida = validator.isValid(obtenNumero);
   const tarjetaMascara = validator.maskify(obtenNumero);
