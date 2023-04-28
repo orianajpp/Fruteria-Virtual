@@ -5,7 +5,7 @@
 * [1. Que es la Frutería-Virtual?](#1-Frutería-Virtual)
 * [2. Como esta estrucrurada la web?](#2-Como-esta-estructurada-la-web?)
 * [3. Como se realiza la validación de los números de la tarjeta de crédito?](#3-Como-se-realiza-la-validación-de-los-números-de-la-tarjeta-de-crédito?)
-* [4. Consideraciones técnicas tomadas en cuenta](#4-consideraciones-técnicas-tomadas-en-cuenta)
+* [4. Consideraciones técnicas tomadas en cuenta](#4-consideraciones-técnicas-tomadas-en-cuenta).
 * [5. Resultados](#5-Resultados)
 
 
