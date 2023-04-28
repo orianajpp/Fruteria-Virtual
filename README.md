@@ -24,37 +24,38 @@ La página web está estructurada de la siguiente manera:
 
 Primeramente, presenta una interfaz en la que se muestra al cliente los productos
 
-![Productos]"../Imagen/ventana1.JPG
+![Productos](src/Imagenes/ventana1.JPG)
 
 El detalle del producto se puede apreciar con un click sobre la fruta que se desea escoger y por medio de la aparicion de una ventana modal, se puede observar el costo, la presentación y la cantidad del producto requerido.
 
-![Modal-presentación]"../Imagen/ventana2.JPG"
+![Modal-presentación](src/Imagen/ventana2.JPG)
 
 Posteriormente, se van agregando productos al “carrito de compras” y se muestra el detalle de los productos a cancelar 
 
-![Modal-carritoCompras]"../Imagen/Ventana 3.JPG"
+![Modal-carritoCompras](src/Imagenes/Ventana 3.JPG)
 
 Luego, al accionar el pago en el botón de pagar, aparece una ventana de pago, en la que se presenta la funcionalidad de la validación de la tarjeta.
 
-![Modal-FormularioDeCompras]"../Imagen/ventana 4.JPG"
+![Modal-FormularioDeCompras](src/Imagenes/ventana 4.JPG)
 
 
 Por último y se activa, por medio de un evento click, la validación de los números ingresados en el input correspondiente y el resultado se entrega por medio de una ventana modal en la que aparece el número de la tarjeta enmascarado. 
 
-![Modal-respuesta]"../Imagen/ventana5.JPG"
+![Modal-respuesta](src/Imagen/ventana5.JPG)
 
 ## 3. Como se realiza la validación de los números de la tarjeta de crédito?
 
 La validación de una tarjeta bancaria se realiza mediante el algoritmo de módulo 10 o mejor conocido como algoritmo de Luhn. Este se caracteriza por responder a los siguientes pasos: 
 
 
-1.- el número de la tarjeta se revierte y se toma cada número como el valor correspondiente a una posición.
-2.- el valor de las posiciones pares es multiplicado por 2
-4.- en caso de resultar un valor de 2 dígitos, los dígitos deben sumarse entre sí para obtener un valor de un dígito
-5.- en caso de resultar un valor de un solo dígito queda tal cual el valor obtenido
-6.- para el caso de las posiciones impares, el valor queda tal cual el valor original
-7.- una vez obtenidos los valores de cada posición (pares e impares), estos deben sumarse
-8.- para que el algoritmo resulte válido, el resultado de la suma debe ser múltiplo de 10, de lo contrario resultará inválido.
+* 1.- El número de la tarjeta se revierte y se toma cada número como el valor correspondiente a una posición.
+* 2.- el valor de las posiciones pares es multiplicado por 2.
+* 3.- En caso de resultar un valor de 2 dígitos, los dígitos deben sumarse entre sí para obtener un valor de un dígito.
+* 4.- En caso de resultar un valor de un solo dígito queda tal cual el valor obtenido.
+* 5.- Para el caso de las posiciones impares, el valor queda tal cual el valor original.
+* 6.- Una vez obtenidos los valores de cada posición (pares e impares), estos deben sumarse
+* 7.- Para que el algoritmo resulte válido, el resultado de la suma debe ser múltiplo de 10, de lo contrario resultará inválido.
+
 A continuación, se ejemplifica en la siguiente imagen: 
 
 
