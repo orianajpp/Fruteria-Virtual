@@ -1,4 +1,4 @@
-# Tarjeta de crédito válida
+# Tarjeta de crédito válida (Fruteria-Virtual)
 
 ## Índice
 
@@ -28,20 +28,20 @@ Primeramente, presenta una interfaz en la que se muestra al cliente los producto
 
 El detalle del producto se puede apreciar con un click sobre la fruta que se desea escoger y por medio de la aparicion de una ventana modal, se puede observar el costo, la presentación y la cantidad del producto requerido.
 
-![Modal-presentación](src/Imagen/ventana2.JPG)
+![presentación](src/Imagenes/ventana2.JPG)
 
 Posteriormente, se van agregando productos al “carrito de compras” y se muestra el detalle de los productos a cancelar 
 
-![Modal-carritoCompras](src/Imagenes/Ventana 3.JPG)
+![carritoCompras](src/Imagenes/Ventana 3.JPG)
 
 Luego, al accionar el pago en el botón de pagar, aparece una ventana de pago, en la que se presenta la funcionalidad de la validación de la tarjeta.
 
-![Modal-FormularioDeCompras](src/Imagenes/ventana 4.JPG)
+![FormularioDeCompras](src/Imagenes/ventana 4.JPG)
 
 
 Por último y se activa, por medio de un evento click, la validación de los números ingresados en el input correspondiente y el resultado se entrega por medio de una ventana modal en la que aparece el número de la tarjeta enmascarado. 
 
-![Modal-respuesta](src/Imagen/ventana5.JPG)
+![respuesta](src/Imagenes/ventana5.JPG)
 
 ## 3. Como se realiza la validación de los números de la tarjeta de crédito?
 

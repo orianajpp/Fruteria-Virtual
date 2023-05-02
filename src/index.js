@@ -12,8 +12,8 @@ const pagar = document.getElementById("pagar");
 const respuesta = document.getElementById("respuesta");
 const obtenHeader = document.getElementById("superior");
 const obtenFooter = document.getElementById("pie");
-const validacion = document.getElementById("validacion")
-// Llamado de clase común al abrir las modales
+const validacion = document.getElementById("validacion");
+
 
 
 // Apagado de modales 
