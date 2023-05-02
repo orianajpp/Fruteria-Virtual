@@ -32,11 +32,11 @@ El detalle del producto se puede apreciar con un click sobre la fruta que se des
 
 Posteriormente, se van agregando productos al “carrito de compras” y se muestra el detalle de los productos a cancelar 
 
-![carritoCompras](src/Imagenes/Ventana 3.JPG)
+![carritoCompras](src/Imagenes/Ventana3.JPG)
 
 Luego, al accionar el pago en el botón de pagar, aparece una ventana de pago, en la que se presenta la funcionalidad de la validación de la tarjeta.
 
-![FormularioDeCompras](src/Imagenes/ventana 4.JPG)
+![FormularioDeCompras](src/Imagenes/ventana4.JPG)
 
 
 Por último y se activa, por medio de un evento click, la validación de los números ingresados en el input correspondiente y el resultado se entrega por medio de una ventana modal en la que aparece el número de la tarjeta enmascarado. 
